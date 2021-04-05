@@ -1,0 +1,22 @@
+create table users (
+  	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    username varchar(16) not null,
+    password varchar(16) not null,
+    date datetime not null
+);
+
+create table posts (
+  	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    username varchar(16) not null,
+    title varchar(100) not null,
+    content varchar(1500) not null,
+    date datetime not null
+);
+
+insert into posts (username, title, content, date) VALUES ('1', 'This is the subject', 'Some content', '2015-11-14 16:38:01');
+
+
+insert into users (username, password, date) VALUES ('ido', '123123', NOW());
+
+SELECT * FROM posts ORDER BY date DESC
+
